@@ -10,25 +10,61 @@
             background-color: #f4f7f6;
             color: #333;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 1000px; 
             background: white;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin: auto;
         }
-        h1 {
-            color: #2c3e50;
+        h1 { color: #2c3e50; }
+        .subtitle { font-size: 1.1em; line-height: 1.6; color: #555; margin-bottom: 40px; }
+        
+        /* Design para sa Product Gallery */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
         }
-        p {
-            font-size: 1.1em;
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            background: #fafafa;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .product-card:hover {
+            transform: scale(1.03); 
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 0;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .product-desc {
+            font-size: 0.95em;
+            color: #444;
             line-height: 1.6;
-            color: #555;
-            margin-bottom: 30px;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
+
         .btn-group {
             display: flex;
             flex-direction: column;
@@ -46,41 +82,106 @@
             width: 80%;
             max-width: 300px;
             transition: 0.3s;
+            text-align: center;
         }
-        .btn-wa {
-            background-color: #00a884; /* WhatsApp Green */
-        }
-        .btn-wa:hover {
-            background-color: #008f6f;
-        }
-        .btn-tg {
-            background-color: #0088cc; /* Telegram Blue */
-        }
-        .btn-tg:hover {
-            background-color: #006699;
-        }
-        .btn-fb {
-            background-color: #1877F2; /* Facebook Blue */
-        }
-        .btn-fb:hover {
-            background-color: #145dbf;
-        }
+        .btn-wa { background-color: #00a884; }
+        .btn-wa:hover { background-color: #008f6f; }
+        .btn-tg { background-color: #0088cc; }
+        .btn-tg:hover { background-color: #006699; }
+        .btn-fb { background-color: #1877F2; }
+        .btn-fb:hover { background-color: #145dbf; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Access IO Digital Store 🚀</h1>
-        <p>Your trusted source for legit Microsoft licenses, AI subscriptions, and premium digital products at the best prices.</p>
+        <p class="subtitle">Your trusted source for legit Microsoft licenses, AI subscriptions, and premium digital products at the best prices.</p>
         
-        <div class="btn-group">
-            <!-- WhatsApp Channel Link -->
-            <a href="https://whatsapp.com/channel/0029VbDhHHS0gcfRUXsGD92X" class="btn btn-wa" target="_blank">🛒 Order via WhatsApp</a>
+        <div class="product-grid">
             
-            <!-- Telegram Contact Link -->
-            <a href="https://t.me/EDS_DigitalShop" class="btn btn-tg" target="_blank">✈️ Message on Telegram</a>
+            <!-- CANVA PRO -->
+            <div class="product-card">
+                <img src="canvaa.png" alt="Canva Pro">
+                <h3>Canva Pro (3 Years)</h3>
+                <p class="product-desc">
+                    ✨ <strong>Canva Pro EDU Invitation</strong><br>
+                    ✨ On your own mail<br><br>
+                    ✨ Instant invitation<br>
+                    ✨ Use your own Canva account<br>
+                    ✨ Access premium features<br>
+                    ✨ Safe & hassle-free process<br><br>
+                    <strong>✨ How to Activate:</strong><br>
+                    1. Send your Canva email after purchase.<br>
+                    2. Accept the Education invitation.<br>
+                    3. Log in and enjoy Canva Pro instantly.<br><br>
+                    📌 <strong>Validity:</strong> 3 years<br>
+                    ✨ <strong>Warranty:</strong> 1 year
+                </p>
+            </div>
+            
+            <!-- GOOGLE AI PRO -->
+            <div class="product-card">
+                <img src="feege.jpg" alt="Google AI Pro">
+                <h3>Google AI Pro | 18 Months</h3>
+                <p class="product-desc">
+                    ✨ Premium AI + 5TB Cloud Storage<br>
+                    ✨ Instant link activation (No credit card required)<br>
+                    ✨ Works with any Google account<br>
+                    ✨ Invite up to 5 family members<br><br>
+                    <strong>✨ How to Activate:</strong><br>
+                    1. Open the activation link.<br>
+                    2. Tap "Activate Now".<br>
+                    3. That's it! Your 18-month plan is ready.<br><br>
+                    📌 <strong>Hold Warranty:</strong> 12 hours
+                </p>
+            </div>
+            
+            <!-- MICROSOFT 365 -->
+            <div class="product-card">
+                <img src="offas.jpg" alt="Microsoft 365">
+                <h3>Microsoft 365 Lifetime</h3>
+                <p class="product-desc">
+                    ✔️ Genuine Microsoft License<br>
+                    ✔️ Unlimited Reinstalls<br>
+                    ✔️ Premium Features at a One-Time Cost<br>
+                    ✔️ Warranty & Trusted After-Sales Support<br><br>
+                    Message us today and upgrade with confidence!
+                </p>
+            </div>
+            
+            <!-- WINDOWS 10/11 -->
+            <div class="product-card">
+                <img src="win.jpg" alt="Windows 10/11 Pro">
+                <h3>Windows 10/11 License</h3>
+                <p class="product-desc">
+                    Need to activate your Windows? Get your license now!<br><br>
+                    🔑 Genuine 25-Digit Product Key<br>
+                    💻 Available for Windows 10 & 11<br>
+                    ♾️ Lifetime Activation<br>
+                    ⚡ Easy & hassle-free setup<br><br>
+                    Product Key provided after payment. Send us a message to order!
+                </p>
+            </div>
+            
+            <!-- REVIT 2027 -->
+            <div class="product-card">
+                <img src="revit.png" alt="Autodesk Revit 2027">
+                <h3>Autodesk Revit 2027</h3>
+                <p class="product-desc">
+                    ✔️ Easy Installation for Mac & Windows<br>
+                    ✔️ Lifetime Warranty & 24/7 Tech Support<br>
+                    ✔️ Pay AFTER Installation<br>
+                    ✔️ 100% Genuine Original License
+                </p>
+            </div>
+            
+        </div>
 
-            <!-- Facebook Page Link -->
+        <h3>Ready to Order? Message us today!</h3>
+        <div class="btn-group">
+            <a href="https://whatsapp.com/channel/0029VbDhHHS0gcfRUXsGD92X" class="btn btn-wa" target="_blank">🛒 Order via WhatsApp</a>
+            <a href="https://t.me/EDS_DigitalShop" class="btn btn-tg" target="_blank">✈️ Message on Telegram</a>
             <a href="https://web.facebook.com/AccessIOPH/" class="btn btn-fb" target="_blank">📘 Visit our Facebook Page</a>
         </div>
     </div>
