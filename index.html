@@ -28,6 +28,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
+            align-items: stretch; /* Sinisiguro na pantay ang cards */
         }
         .product-card {
             border: 1px solid #eee;
@@ -38,7 +39,7 @@
             transition: transform 0.2s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start; /* FIX: Pinalitan mula space-between para mawala ang malaking gap sa gitna */
             text-align: left;
         }
         .product-card:hover {
@@ -46,6 +47,8 @@
         }
         .product-card img {
             width: 100%;
+            aspect-ratio: 16 / 9; /* FIX: Ginagawang pare-pareho ang sukat ng lahat ng pictures */
+            object-fit: cover; /* FIX: Para hindi ma-stretch o pumangit ang quality ng picture */
             border-radius: 8px;
             margin-bottom: 15px;
         }
